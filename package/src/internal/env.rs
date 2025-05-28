@@ -2,7 +2,7 @@ use std::{env::current_dir, path::PathBuf};
 
 use dotenvy::from_path_override as env_from;
 
-use crate::{get_var, set_var};
+use crate::internal::var::{get_var, set_var};
 
 /// An environment variables initializer.
 ///

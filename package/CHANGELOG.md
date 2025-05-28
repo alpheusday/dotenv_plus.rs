@@ -1,3 +1,9 @@
+## 0.5.1 (2025-05-28)
+
+### What's Changed
+
+- Fold `env` and `var` module into `internal` module
+
 ## 0.5.0 (2025-02-25)
 
 ### Breaking Changes

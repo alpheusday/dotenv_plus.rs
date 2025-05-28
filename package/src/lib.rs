@@ -29,10 +29,7 @@
 //! RUST_ENV=production cargo run
 //! ```
 
-pub(crate) mod env;
+pub(crate) mod internal;
 
-pub(crate) mod var;
-
-pub use env::*;
-
-pub use var::*;
+pub use internal::env::*;
+pub use internal::var::*;
