@@ -8,8 +8,8 @@ description = """
 A dotenv solution for Rust
 """
 readme = "README.md"
-homepage = "https://github.com/alpheustangs/dotenv_plus.rs"
-repository = "https://github.com/alpheustangs/dotenv_plus.rs"
+homepage = "https://github.com/alpheus-day/dotenv_plus.rs"
+repository = "https://github.com/alpheus-day/dotenv_plus.rs"
 license = "MIT"
 keywords = [
     "dotenv_plus",
