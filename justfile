@@ -1,5 +1,5 @@
 set shell := ["bash", "-cu"]
-set windows-shell := ["powershell"]
+set windows-shell := ["pwsh", "-Command"]
 
 # Default action
 _:
@@ -7,13 +7,9 @@ _:
     just fmt
     just test
 
-# Setup the project
-setup:
-    brew install ls-lint typos-cli
-
 # Lint code
 lint:
-    ls-lint
+    ls-lint -config ./.ls-lint.yaml
     typos
     cargo check
     cargo clippy
@@ -26,6 +22,14 @@ fmt:
 # Run test
 test:
     cargo test -p tests -- --nocapture
+
+# Publish package as dry-run
+publish-try:
+    cd ./package && cargo publish --dry-run
+
+# Publish package
+publish:
+    cd ./package && cargo publish
 
 # Clean up
 clean:
